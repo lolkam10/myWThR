@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.MainPageFragment"
+    android:background="@color/backgroundColor"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="6dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:id="@+id/app_bar"
+            app:menu="@menu/top_bar_menu"
+            app:title="@string/mywthr_title"
+            app:titleTextColor="@color/colorAccent"
+            app:titleTextAppearance="@style/TextAppearance.mywthr.headline5"
+            style="@style/Widget.mywthr.Toolbar"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp"
+        android:elevation="0dp"
+        android:paddingHorizontal="8dp"
+        android:paddingTop="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                app:cardBackgroundColor="@color/colorAccent"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/mywthr_city"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:text="Your city"
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="48sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:id="@+id/mywthr_date"
+                        android:gravity="center"
+                        android:textColor="@color/textColorSecondary"
+                        android:text="date"
+                        android:textSize="32sp"
+                        android:textStyle="italic"/>
+
+                    <ImageView
+                        android:id="@+id/mywthr_icon"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/example_image"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/mywthr_temp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center"
+                        android:text="23\u2103"
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="86sp"/>
+
+                    <TextView
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginBottom="12dp"
+                        android:id="@+id/mywthr_description"
+                        android:text="opis"
+                        android:layout_marginHorizontal="15dp"
+                        android:textColor="@color/textColorSecondary"
+                        android:textSize="24sp"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/car_pres"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/colorAccent"
+                    app:cardElevation="8dp"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="12dp"
+                            android:paddingVertical="6dp"
+                            style="@style/TextAppearance.mywthr.subtitle.old"
+                            android:text="@string/pressure"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/mywthr_pressure"
+                            android:paddingHorizontal="12dp"
+                            android:paddingVertical="6dp"
+                            style="@style/TextAppearance.mywthr.headline5.old"
+                            android:text="1000 hPa"
+                            android:gravity="center"
+                            />
+
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/colorAccent"
+                    app:cardElevation="8dp"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="12dp"
+                            android:paddingVertical="6dp"
+                            style="@style/TextAppearance.mywthr.subtitle.old"
+                            android:text="@string/humidity"
+
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/mywthr_humidity"
+                            android:paddingHorizontal="12dp"
+                            android:paddingVertical="6dp"
+                            style="@style/TextAppearance.mywthr.headline5.old"
+                            android:text="90 %"
+                            android:gravity="center"
+                            />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/colorAccent"
+                    app:cardElevation="8dp"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="12dp"
+                            android:paddingVertical="6dp"
+                            style="@style/TextAppearance.mywthr.subtitle.old"
+                            android:text="Wschód:"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/mywthr_sunrise"
+                            android:paddingHorizontal="12dp"
+                            android:paddingVertical="6dp"
+                            style="@style/TextAppearance.mywthr.headline5.old"
+                            android:text="07:00"
+                            android:gravity="center"
+                            />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/colorAccent"
+                    app:cardElevation="8dp"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="12dp"
+                            android:paddingVertical="6dp"
+                            style="@style/TextAppearance.mywthr.subtitle.old"
+                            android:text="Zachód:"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/mywthr_sunset"
+                            android:paddingHorizontal="12dp"
+                            android:paddingVertical="6dp"
+                            android:text="19:00"
+                            style="@style/TextAppearance.mywthr.headline5.old"
+                            android:gravity="center"
+                            />
+
+                    </LinearLayout>
+
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

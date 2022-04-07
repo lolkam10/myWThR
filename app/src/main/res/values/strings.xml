@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">myWThR</string>
+    <string name="mywthr_title">myWThR</string>
+    <string name="search">Search</string>
+    <string name="options">Options</string>
+    <string name="pressure">Ciśnienie:</string>
+    <string name="humidity">Wilgotność:</string>
+    <string name="sunrise">Wschód słońca:</string>
+    <string name="sunset">Zachód słońca:</string>
+</resources>
